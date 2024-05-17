@@ -118,7 +118,7 @@ public with sharing class FlowControlLoopsCollections {
     public static String checkString(String a) {
         if (String.isEmpty(a)) {
             return 'Empty';
-        } else if (a == null) {
+        } else if (String.isBlank(a)) {
             return 'Null';
         } else {
         return 'Contains Text'; // Replace null with the variable you used to store the result
@@ -137,7 +137,16 @@ public with sharing class FlowControlLoopsCollections {
      * @return The grade for the given score.
      */
     public static String determineGrade(Integer score) {
-        return null; // Replace null with the variable you used to store the result
+        if score >= 90;
+        return 'A';
+        } else if score >= 80;
+        return 'B';
+        } else if score >= 70;
+        return 'C';
+        } else if score >= 60;
+        return 'D';
+        } else {
+        return 'F'; // Replace null with the variable you used to store the result
     }
 
 
@@ -150,13 +159,14 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer sumUpToLimit(Integer intLimit) {
         /* 
-         for (){
-            
-         }
+        Integer sum = 0; 
+        for (Integer i = 1; i <=intLimit; i++) {
+            sum += i;
+        }
+        return sum;
         */
+         }
 
-        return null; // Replace null with the variable you used to store the result
-    }
 
     /**
      * Question 9
@@ -166,15 +176,12 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String returnHelloWorld() {
         // Initialize the result String
-
+        String result = ' ';
         // Use a for loop to append 'Hello World!;' to the result string three times
         /* 
-         for (){
-            
-         }
-        */
-
-        return null; // Replace null with the variable you used to store the result
+        for (Integer i = 0; i < 3; i++){
+            result += 'Hello World!;';
+        }        return result;
     }
 
     /**
@@ -188,19 +195,18 @@ public with sharing class FlowControlLoopsCollections {
      * @return The new string with the inputString repeated repeatCount times.
      */
     public static String repeatString(String inputString, Integer repeatCount) {
-        // Initialize the result String
+        String result = '';
 
-        // Use a for loop to append the inputString to the result string repeatCount times
-        /*
-        for () {
-
-            // If it is not the last iteration, add a semicolon to separate the strings
+        for (Integer i = 0; i < repeatCount; i++) {
+            result += inputString;
+            
+            if (i < repeatCount - 1) {
+                result += '; ';
+            }
         }
-        */
-
-        // Return the final result string
-        return null; // Replace null with the variable you used to store the result
+        return result;
     }
+}   
 
     /**
      * Question 11
@@ -209,15 +215,12 @@ public with sharing class FlowControlLoopsCollections {
      * @return A List of integers containing the numbers 1, 2, and 3.
      */
     public static List<Integer> createAndPopulateList() {
-        // Create a new list of integers
+        List<Integer> numList = new List<Integer>();
+        numList.add(1);
+        numList.add(2);
+        numList.add(3);
 
-        // Add the integers 1, 2, and 3 to the list
-        // add 1
-        // add 2
-        // add 3
-
-        // Return the populated list
-        return null; // Replace null with the variable you used to store the result
+        return nullnumList;
     }
 
     /**
@@ -227,13 +230,10 @@ public with sharing class FlowControlLoopsCollections {
      * @return A List of integers from 1 to 5, excluding the number 3.
      */
     public static List<Integer> createAndRemoveFromList() {
-        // Create a new list of integers and add numbers 1 to 5
         List<Integer> numberList = new List<Integer>{1, 2, 3, 4, 5}; //DO NOT CHANGE
 
-        // Remove the 3rd element (number 3) from the list
-        
-        // Return the updated list
-        return null; // Replace null with the variable you used to store the result
+        numberList.remove(2);
+        return numberList;
     }
 
     /**
@@ -243,17 +243,14 @@ public with sharing class FlowControlLoopsCollections {
      * @param n The last integer in the List.
      * @return A List of integers from 1 to 'n'.
      */
-    public static List<Integer> createIntegerList(Integer n) {
-        // Create a new list of integers 
-
-        /*
-        for() {
-            //add integer to the list
+    public static List<Integer> createIntegerList(Integer n){
+        List<Integer> integerList = new List<Integer>();
+        for (Integer i = 1; i <= n; i++) {
+            integerList.add(i);
         }
-        */ 
-
-        return null; // Replace null with the variable you used to store the result
+        return integerList;
     }
+}
 
     /**
      * Question 14
