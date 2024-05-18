@@ -37,7 +37,7 @@ public with sharing class FlowControlLoopsCollections {
 
     /**
      * Question 2
-     * Checks if a person is eligible to vote based on their age.
+     * Checks if a person is eligible to b     bv vote based on their age.
      * A person is eligible to vote if they are 18 years old or older.
      * If the age is less than 18, the method will return false.
      * Example: votingEligibility(18) should return true
@@ -115,14 +115,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        if (String.isEmpty(a)) {
-            return 'Empty';
-        } else if (String.isBlank(a)) {
+        if (a == null) {
             return 'Null';
-            } else {
-            return 'Contains Text'; // Replace null with the variable you used to store the result
+        } else if (String.isBlank(a)) {
+            return 'Empty';
+        } else {
+            return 'Contains Text';
         }
     }
+    
 
     /**
      * Question 7
@@ -159,13 +160,11 @@ public with sharing class FlowControlLoopsCollections {
      * @return The sum of all integers up to the limit.
      */
     public static Integer sumUpToLimit(Integer intLimit) {
-        /* 
         Integer sum = 0; 
         for (Integer i = 1; i <=intLimit; i++) {
             sum += i;
         }
         return sum;
-        */
         }
 
 
@@ -219,7 +218,7 @@ public with sharing class FlowControlLoopsCollections {
         numList.add(2);
         numList.add(3);
 
-        return nullnumList;
+        return numList;
     }
 
     /**
@@ -249,7 +248,6 @@ public with sharing class FlowControlLoopsCollections {
         }
         return integerList;
     }
-}
 
     /**
      * Question 14
@@ -330,7 +328,6 @@ public with sharing class FlowControlLoopsCollections {
         }
         return totalSum;
     }
-}
 
     /**
      * Question 18
@@ -339,7 +336,7 @@ public with sharing class FlowControlLoopsCollections {
      * @return The Map of fruits and their quantities.
      */
     public static Map<String, Integer> addItemsToMap() {
-        Map<String; Integer> fruitMap = new Map<String; Integer>();
+        Map<String, Integer> fruitMap = new Map<String, Integer>();
         fruitMap.put('Apples', 5);
         fruitMap.put('Oranges', 10);
         fruitMap.put('Bananas', 15);
@@ -398,6 +395,4 @@ public with sharing class FlowControlLoopsCollections {
         }
         return highPaidEmployees;
     }
-}
-
 }
