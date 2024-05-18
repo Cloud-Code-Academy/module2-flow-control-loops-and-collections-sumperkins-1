@@ -123,6 +123,7 @@ public with sharing class FlowControlLoopsCollections {
         } else {
         return 'Contains Text'; // Replace null with the variable you used to store the result
     }
+}
 
     /**
      * Question 7
@@ -138,16 +139,17 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String determineGrade(Integer score) {
         if score >= 90;
-        return 'A';
-        } else if score >= 80;
+        return 'A';{
+        } else if score >= 80;{
         return 'B';
-        } else if score >= 70;
+        } else if score >= 70;{
         return 'C';
-        } else if score >= 60;
+        } else if score >= 60;{
         return 'D';
         } else {
         return 'F'; // Replace null with the variable you used to store the result
     }
+}
 
 
     /**
@@ -165,7 +167,7 @@ public with sharing class FlowControlLoopsCollections {
         }
         return sum;
         */
-         }
+        }
 
 
     /**
@@ -180,7 +182,7 @@ public with sharing class FlowControlLoopsCollections {
         // Use a for loop to append 'Hello World!;' to the result string three times
         /* 
         for (Integer i = 0; i < 3; i++){
-            result += 'Hello World!;';
+            result += 'Hello World!;
         }        return result;
     }
 
