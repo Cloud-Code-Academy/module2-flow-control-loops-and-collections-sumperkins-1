@@ -48,7 +48,7 @@ public with sharing class FlowControlLoopsCollections {
         if (age >= 18) {
             return true;
         }
-        return false; // Replace null with the variable you used to store the result
+        return false;
     }
 
     /**
@@ -63,10 +63,9 @@ public with sharing class FlowControlLoopsCollections {
     public static Integer findMax(Integer num1, Integer num2) {
         if (num1== null || num2 == null) {
         return null;
-        }   
-            // Initialize largestNum as null     
+        }     
             Integer largestNum = Math.max(num1, num2);
-            return largestNum; // Replace null with the variable you used to store the result
+            return largestNum;
     }
 
 
@@ -87,7 +86,7 @@ public with sharing class FlowControlLoopsCollections {
             return 'Negative';
             } else {
                 return 'Zero';
-        } // Replace null with the variable you used to store the result
+        }
     }
 
     /**
@@ -120,10 +119,10 @@ public with sharing class FlowControlLoopsCollections {
             return 'Empty';
         } else if (String.isBlank(a)) {
             return 'Null';
-        } else {
-        return 'Contains Text'; // Replace null with the variable you used to store the result
+            } else {
+            return 'Contains Text'; // Replace null with the variable you used to store the result
+        }
     }
-}
 
     /**
      * Question 7
@@ -138,18 +137,18 @@ public with sharing class FlowControlLoopsCollections {
      * @return The grade for the given score.
      */
     public static String determineGrade(Integer score) {
-        if score >= 90;
-        return 'A';{
-        } else if score >= 80;{
-        return 'B';
-        } else if score >= 70;{
-        return 'C';
-        } else if score >= 60;{
-        return 'D';
+        if (score >= 90) {
+            return 'A';
+        } else if (score >= 80) {
+            return 'B';
+        } else if (score >= 70) {
+            return 'C';
+        } else if (score >= 60) {
+            return 'D';
         } else {
-        return 'F'; // Replace null with the variable you used to store the result
+            return 'F';
+        }
     }
-}
 
 
     /**
@@ -177,14 +176,13 @@ public with sharing class FlowControlLoopsCollections {
      * @return The string "Hello World!; Hello World!; Hello World!; "
      */
     public static String returnHelloWorld() {
-        // Initialize the result String
-        String result = ' ';
-        // Use a for loop to append 'Hello World!;' to the result string three times
-        /* 
-        for (Integer i = 0; i < 3; i++){
-            result += 'Hello World!;
-        }        return result;
+        String result = '';
+        for (Integer i = 0; i < 3; i++) {
+            result += 'Hello World!; ';
+        }
+        return result;
     }
+    
 
     /**
      * Question 10
@@ -208,7 +206,6 @@ public with sharing class FlowControlLoopsCollections {
         }
         return result;
     }
-}   
 
     /**
      * Question 11
@@ -263,13 +260,13 @@ public with sharing class FlowControlLoopsCollections {
      * @return A Set of unique strings.
      */
     public static Set<String> createStringSet(List<String> inputList) {
-        // Create a new Set of strings
         Set<String> stringSet = new Set<String>();
-
-        stringSet.add(inputList)
-
-        return stringSet; // Replace null with the variable you used to store the result
+        for(String str : inputList) {
+            stringSet.add(str);
+        }
+        return stringSet;
     }
+    
 
     /**
      * Question 15
